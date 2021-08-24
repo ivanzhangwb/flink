@@ -76,6 +76,7 @@ public class CountEvictor<W extends Window> implements Evictor<Object, W> {
                 } else {
                     iterator.remove();
                 }
+                
             }
         }
     }
