@@ -34,6 +34,9 @@ import java.util.stream.IntStream;
 import static org.apache.flink.util.Preconditions.checkNotNull;
 
 /**
+ * InputGate 可以等同于 Reader 概念，主要用于读取Map阶段之后分区当中的数据;
+ * ========================================================================
+ * <p>
  * An input gate consumes one or more partitions of a single produced intermediate result.
  *
  * <p>Each intermediate result is partitioned over its producing parallel subtasks; each of these

@@ -22,6 +22,8 @@ import org.apache.flink.annotation.PublicEvolving;
 import org.apache.flink.streaming.runtime.streamrecord.StreamElement;
 
 /**
+ * 【窗口机制：水印机制】 主要是处理数据各种情况下延迟，让引擎知道这些数据要如何等待？ 等待多久的机制; 保证特定时间后一定会触发窗口进行计算;
+ * <p>
  * A Watermark tells operators that no elements with a timestamp older or equal to the watermark
  * timestamp should arrive at the operator. Watermarks are emitted at the sources and propagate
  * through the operators of the topology. Operators must themselves emit watermarks to downstream

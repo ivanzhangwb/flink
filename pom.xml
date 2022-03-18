@@ -57,7 +57,7 @@ under the License.
 		<module>flink-filesystems</module>
 		<module>flink-rpc</module>
 		<module>flink-runtime</module>
-		<module>flink-runtime-web</module>
+<!--		<module>flink-runtime-web</module>-->
 		<module>flink-optimizer</module>
 		<module>flink-streaming-java</module>
 		<module>flink-streaming-scala</module>
@@ -68,7 +68,7 @@ under the License.
 		<module>flink-container</module>
 		<module>flink-queryable-state</module>
 		<module>flink-tests</module>
-		<module>flink-end-to-end-tests</module>
+<!--		<module>flink-end-to-end-tests</module>-->
 		<module>flink-test-utils-parent</module>
 		<module>flink-state-backends</module>
 		<module>flink-dstl</module>
@@ -79,10 +79,10 @@ under the License.
 		<module>flink-dist</module>
 		<module>flink-metrics</module>
 		<module>flink-yarn</module>
-		<module>flink-yarn-tests</module>
-		<module>flink-fs-tests</module>
+<!--		<module>flink-yarn-tests</module>-->
+<!--		<module>flink-fs-tests</module>-->
 		<module>flink-docs</module>
-		<module>flink-python</module>
+<!--		<module>flink-python</module>-->
 		<module>flink-walkthroughs</module>
 		<module>flink-kubernetes</module>
 		<module>flink-external-resources</module>
@@ -1889,35 +1889,35 @@ under the License.
 					</configuration>
 				</plugin>
 
-				<plugin>
-					<groupId>com.diffplug.spotless</groupId>
-					<artifactId>spotless-maven-plugin</artifactId>
-					<version>${spotless.version}</version>
-					<configuration>
-						<java>
-							<googleJavaFormat>
-								<version>1.7</version>
-								<style>AOSP</style>
-							</googleJavaFormat>
+<!--				<plugin>-->
+<!--					<groupId>com.diffplug.spotless</groupId>-->
+<!--					<artifactId>spotless-maven-plugin</artifactId>-->
+<!--					<version>${spotless.version}</version>-->
+<!--					<configuration>-->
+<!--						<java>-->
+<!--							<googleJavaFormat>-->
+<!--								<version>1.7</version>-->
+<!--								<style>AOSP</style>-->
+<!--							</googleJavaFormat>-->
 
-							<!-- \# refers to the static imports -->
-							<importOrder>
-								<order>org.apache.flink,org.apache.flink.shaded,,javax,java,scala,\#</order>
-							</importOrder>
+<!--							&lt;!&ndash; \# refers to the static imports &ndash;&gt;-->
+<!--							<importOrder>-->
+<!--								<order>org.apache.flink,org.apache.flink.shaded,,javax,java,scala,\#</order>-->
+<!--							</importOrder>-->
 
-							<removeUnusedImports />
-						</java>
-					</configuration>
-					<executions>
-						<execution>
-							<id>spotless-check</id>
-							<phase>validate</phase>
-							<goals>
-								<goal>check</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
+<!--							<removeUnusedImports />-->
+<!--						</java>-->
+<!--					</configuration>-->
+<!--					<executions>-->
+<!--						<execution>-->
+<!--							<id>spotless-check</id>-->
+<!--							<phase>validate</phase>-->
+<!--							<goals>-->
+<!--								<goal>check</goal>-->
+<!--							</goals>-->
+<!--						</execution>-->
+<!--					</executions>-->
+<!--				</plugin>-->
 
 
 				<plugin>

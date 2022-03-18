@@ -31,6 +31,8 @@ import org.apache.flink.streaming.api.windowing.windows.Window;
 import java.io.Serializable;
 
 /**
+ * 【决定一个窗口何时能够被计算或清除】
+ * <p>
  * A {@code Trigger} determines when a pane of a window should be evaluated to emit the results for
  * that part of the window.
  *
@@ -58,6 +60,8 @@ public abstract class Trigger<T, W extends Window> implements Serializable {
     private static final long serialVersionUID = -4104633972991191369L;
 
     /**
+     * 【基于数据记录个数的延迟计算】
+     * <p>
      * Called for every element that gets added to a pane. The result of this will determine whether
      * the pane is evaluated to emit results.
      *
@@ -70,6 +74,8 @@ public abstract class Trigger<T, W extends Window> implements Serializable {
             throws Exception;
 
     /**
+     * 【基于处理时间的延迟计算】
+     * <p>
      * Called when a processing-time timer that was set using the trigger context fires.
      *
      * @param time The timestamp at which the timer fired.
@@ -80,6 +86,8 @@ public abstract class Trigger<T, W extends Window> implements Serializable {
             throws Exception;
 
     /**
+     *【基于事件时间的延迟计算】
+     * <p>
      * Called when an event-time timer that was set using the trigger context fires.
      *
      * @param time The timestamp at which the timer fired.

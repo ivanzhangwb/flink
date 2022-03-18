@@ -48,10 +48,13 @@ import java.util.List;
 public class SlidingEventTimeWindows extends WindowAssigner<Object, TimeWindow> {
     private static final long serialVersionUID = 1L;
 
+    /** 窗口的长度 */
     private final long size;
 
+    /** 滑动距离 */
     private final long slide;
 
+    /** 窗口的起始时间 */
     private final long offset;
 
     protected SlidingEventTimeWindows(long size, long slide, long offset) {
@@ -70,7 +73,9 @@ public class SlidingEventTimeWindows extends WindowAssigner<Object, TimeWindow> 
     public Collection<TimeWindow> assignWindows(
             Object element, long timestamp, WindowAssignerContext context) {
         if (timestamp > Long.MIN_VALUE) {
+            // 分成几个窗口
             List<TimeWindow> windows = new ArrayList<>((int) (size / slide));
+            // 最后窗口的起始位置
             long lastStart = TimeWindow.getWindowStartWithOffset(timestamp, offset, slide);
             for (long start = lastStart; start > timestamp - size; start -= slide) {
                 windows.add(new TimeWindow(start, start + size));

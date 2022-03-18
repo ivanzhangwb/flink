@@ -28,6 +28,7 @@ import org.apache.flink.shaded.guava30.com.google.common.collect.Iterables;
 import java.util.Iterator;
 
 /**
+ * 【阈值过滤器】
  * An {@link Evictor} that keeps elements based on a {@link DeltaFunction} and a threshold.
  *
  * <p>Eviction starts from the first element of the buffer and removes all elements from the buffer

@@ -26,6 +26,7 @@ import org.apache.flink.util.Collector;
 import java.io.Serializable;
 
 /**
+ * 【窗口函数】主要用于对进入窗口的数据进行计算； 比如有： 增量计算函数、全量计算函数
  * Base interface for functions that are evaluated over keyed (grouped) windows.
  *
  * @param <IN> The type of the input value.

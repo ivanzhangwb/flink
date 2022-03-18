@@ -27,6 +27,7 @@ import org.apache.flink.streaming.runtime.operators.windowing.TimestampedValue;
 import java.util.Iterator;
 
 /**
+ * 【时间过滤器】
  * An {@link Evictor} that keeps elements for a certain amount of time. Elements older than {@code
  * current_time - keep_time} are evicted. The current_time is time associated with {@link
  * TimestampedValue}

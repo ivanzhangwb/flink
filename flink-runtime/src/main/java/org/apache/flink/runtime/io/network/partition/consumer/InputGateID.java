@@ -24,6 +24,8 @@ import org.apache.flink.runtime.jobgraph.IntermediateDataSetID;
 import java.io.Serializable;
 
 /**
+ * 消费一个中间态结果 ID (MAP之后没有被Reduce的阶段)
+ * <p>
  * Runtime identifier of a consumed {@link
  * org.apache.flink.runtime.executiongraph.IntermediateResult}.
  *

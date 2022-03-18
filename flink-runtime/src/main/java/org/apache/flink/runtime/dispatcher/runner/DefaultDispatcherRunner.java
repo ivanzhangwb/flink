@@ -113,6 +113,10 @@ public final class DefaultDispatcherRunner implements DispatcherRunner, LeaderCo
                 });
     }
 
+    /**
+     *
+     * @param leaderSessionID
+     */
     private void startNewDispatcherLeaderProcess(UUID leaderSessionID) {
         stopDispatcherLeaderProcess();
 
@@ -133,6 +137,11 @@ public final class DefaultDispatcherRunner implements DispatcherRunner, LeaderCo
                                 terminationFuture));
     }
 
+    /**
+     *
+     * @param leaderSessionID
+     * @return
+     */
     private DispatcherLeaderProcess createNewDispatcherLeaderProcess(UUID leaderSessionID) {
         final DispatcherLeaderProcess newDispatcherLeaderProcess =
                 dispatcherLeaderProcessFactory.create(leaderSessionID);

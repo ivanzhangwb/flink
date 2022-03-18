@@ -27,6 +27,8 @@ import org.apache.flink.streaming.runtime.operators.windowing.TimestampedValue;
 import java.io.Serializable;
 
 /**
+ * 【窗口数据的过滤器】可以在 WindowFunction 执行前/后 从 Window 中过滤元素;
+ * <p>
  * An {@code Evictor} can remove elements from a pane before/after the evaluation of WindowFunction
  * and after the window evaluation gets triggered by a {@link
  * org.apache.flink.streaming.api.windowing.triggers.Trigger}

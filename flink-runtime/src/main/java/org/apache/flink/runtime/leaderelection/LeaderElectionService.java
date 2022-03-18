@@ -23,6 +23,8 @@ import javax.annotation.Nonnull;
 import java.util.UUID;
 
 /**
+ * leader 选举服务
+ *
  * Interface for a service which allows to elect a leader among a group of contenders.
  *
  * <p>Prior to using this service, it has to be started calling the start method. The start method
